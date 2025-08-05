@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 import ServiceCategoryGrid from "./ServiceCategoryGrid";
 
 const Home = () => {
@@ -615,6 +616,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
