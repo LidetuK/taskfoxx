@@ -88,5 +88,6 @@
       "tag": "p",
       "classes": ["text-xs", "font-light"]
     }
-  ]
+  ],
+  "pagesDirectory": "src/pages"
 }

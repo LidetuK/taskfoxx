@@ -1,18 +1,22 @@
-import { Suspense } from "react";
-import { useRoutes, Routes, Route } from "react-router-dom";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Home from "./components/home";
-import routes from "tempo-routes";
+
+function TestHome() {
+  return (
+    <div style={{ padding: '20px', backgroundColor: 'lightgreen', color: 'white' }}>
+      <h1>Home Page Test</h1>
+      <p>This is the home page - routing is working!</p>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
-      <>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-        {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
-      </>
-    </Suspense>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/test" element={<TestHome />} />
+    </Routes>
   );
 }
 
